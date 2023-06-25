@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.7/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .section {
+      position: relative;
+      padding: 80px 0;
+    }
+
+    .section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: -1;
+    }
+
+    .section-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .section-title {
+      color: #ffffff;
+      font-size: 36px;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .section-subtitle {
+      color: #ffffff;
+      font-size: 24px;
+      font-weight: 500;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-img {
+      display: block;
+      margin: 0 auto;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center;
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .project-card {
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+
+
+
+    .timeline {
+  position: relative;
+  margin-top: 2rem;
+}
+
+.timeline:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  background-color: #fff;
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.timeline-content {
+  position: relative;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+}
+
+.timeline-content h3 {
+  margin-bottom: 0.5rem;
+  color: #2e2f2f;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.timeline-content p {
+  margin-bottom: 0;
+  color: #2e2f2f;
+  font-size: 0.875rem;
+}
+
+.timeline-item:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -8px;
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+.timeline-item:first-child:before {
+  display: none;
+}
+
+.timeline-item:last-child:before {
+  display: none;
+}
+
+.timeline-item:before {
+  border: 2px solid #fff;
+}
+
+.timeline-item:last-child:before {
+  border-width: 0;
+}
+
+  </style>
+</head>
+<body>
+  <header class="bg-gradient-to-r from-purple-600 to-indigo-600 text-white py-10">
+    <div class="container mx-auto flex items-center justify-center flex-col">
+      <img src="profile.jpg" alt="Profile Photo" class="w-32 rounded-full mb-4 border-4">
+      <h1 class="text-4xl">Shashank Kumar</h1>
+    </div>
+  </header>
+  
+  <section id="intro" class="section bg-gray-900 text-white">
+    <div class="container mx-auto section-content">
+      <h2 class="section-title">Introduction</h2>
+      <p class="section-subtitle">
+        Welcome to my portfolio website! I'm Shashank Kumar, a passionate Software Developer driven by a relentless pursuit of delivering impactful solutions. With expertise in Android Development, Java, PHP- Laravel, Web Development. I bring creativity, innovation, and a strategic approach to every project. Explore my portfolio and let's collaborate on creating remarkable outcomes together.
+    </p>
+    </div>
+  </section>
+  
+  <section id="education" class="section bg-gradient-to-r from-blue-600 to-cyan-600 text-white">
+    <div class="container mx-auto section-content">
+      <h2 class="section-title">Education</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h3>IIT BHU, Varanasi</h3>
+            <p class="text-gray-500">B.tech in Pharmaceutical Engineering and Technology, 2022-2026</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h3>S.A.D.N Convent School</h3>
+            <p class="text-gray-500">Completed Class 12th in 2021, Scored 96.6%</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-content">
+              <h3>G.I.P Public School</h3>
+              <p class="text-gray-500">Completed Class 10th in 2019, Scored 95%</p>
+            </div>
+          </div>
+      </div>
+    </div>
+  </section>
+  
+  
+  <section id="certificates" class="section bg-gradient-to-r from-pink-600 to-rose-600 text-white">
+    <div class="container mx-auto section-content">
+      <h2 class="section-title">Certificates</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="certificate-card bg-white rounded-lg p-4 flex items-center justify-center flex-col hover:shadow-xl transition duration-300">
+          <i class="fab fa-java text-4xl mb-4 text-gray-500"></i>
+          <h3 class="text-xl font-bold mb-2 text-gray-500">Oracle Certified Java 8 Programmer</h3>
+          <p class="text-gray-500">Year: 2017</p>
+        </div>
+        <div class="certificate-card bg-white rounded-lg p-4 flex items-center justify-center flex-col hover:shadow-xl transition duration-300">
+          <i class="fab fa-google text-4xl mb-4 text-gray-500"></i>
+          <h3 class="text-xl font-bold mb-2 text-gray-500" >Google Certified Associate Android Developer</h3>
+          <p class="text-gray-500">Year: 2018</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section id="skills" class="section bg-gradient-to-r from-green-600 to-lime-600 text-white">
+    <div class="container mx-auto section-content">
+      <h2 class="section-title">Tech Stack Skills</h2>
+      <ul class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <li class="p-4 bg-white rounded-lg text-center text-gray-500  flex-col hover:shadow-xl transition duration-500">
+          <i class="fab fa-html5 text-3xl mb-2 text-gray-500"></i>
+          <p >HTML</p>
+        </li>
+        <li class="p-4 bg-white rounded-lg  text-center text-gray-500 flex-col hover:shadow-xl transition duration-300">
+          <i class="fab fa-css3-alt text-3xl mb-2"></i>
+          <p>CSS</p>
+        </li>
+        <li class="p-4 bg-white rounded-lg  text-center text-gray-500 flex-col hover:shadow-xl transition duration-300">
+          <i class="fab fa-js text-3xl mb-2"></i>
+          <p>JavaScript</p>
+        </li>
+        <li class="p-4 bg-white rounded-lg  text-center text-gray-500 flex-col hover:shadow-xl transition duration-300">
+          <i class="fab fa-java text-3xl mb-2"></i>
+          <p>Java</p>
+        </li>
+        <li class="p-4 bg-white rounded-lg  text-center text-gray-500 flex-col hover:shadow-xl transition duration-300">
+          <i class="fab fa-cuttlefish text-3xl mb-2"></i>
+          <p>C</p>
+        </li>
+        <li class="p-4 bg-white rounded-lg  text-center text-gray-500 flex-col hover:shadow-xl transition duration-300">
+          <i class="fab fa-python text-3xl mb-2"></i>
+          <p>Python</p>
+        </li>
+        <li class="p-4 bg-white rounded-lg  text-center text-gray-500 flex-col hover:shadow-xl transition duration-300">
+          <i class="fab fa-android text-3xl mb-2"></i>
+          <p>Android</p>
+        </li>
+        <li class="p-4 bg-white rounded-lg  text-center text-gray-500 flex-col hover:shadow-xl transition duration-300">
+            <i class="fab fa-php text-3xl mb-2"></i>
+            <p>PHP</p>
+          </li>
+      </ul>
+    </div>
+  </section>
+  
+  <section id="projects" class="section bg-gradient-to-r from-yellow-600 to-amber-600 text-white">
+    <div class="container mx-auto section-content">
+      <h2 class="section-title">My Projects</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="project-card">
+          <img src="unnamed.png" alt="Project 1" class="w-64">
+          <div class="p-4">
+            <h3 class="text-xl font-bold mb-2">Opined</h3>
+            <p class="mb-2">Opined is a discussion-driven micro-blogging social media platform that focuses only on people’s opinions and dissent. </p>
+            <p class="text-sm text-white-500 mb-2">App Link: <a href="https://play.google.com/store/apps/details?id=com.app.weopined&hl=en_IN&gl=US" class="text-white underline">Link to Playstore</a></p>
+            <p class="text-sm text-white-500">Installs: 9000+</p>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="orion.png" alt="Project 2" class="w-64 p-8">
+          <div class="p-4">
+            <h3 class="text-xl font-bold mb-2">Android Tutorial App</h3>
+            <p class="mb-2">Android Tutorial app with code examples to learn Android, Java, Kotlin at one place. </p>
+            <p class="text-sm text-white-500 mb-2">App Link: <a href="https://play.google.com/store/apps/details?id=programming.android.tutorial&hl=en_IN&gl=US" class="text-white underline">Link to Playstore</a></p>
+            <p class="text-sm text-white-500">Installs: 32,000+</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+  <footer class="bg-gray-900 text-white py-10">
+    <div class="container mx-auto flex items-center justify-center flex-col">
+      <ul class="flex gap-4">
+        <li><a href="mailto:shashank.kumar.phe22@itbhu.ac.in" class="flex items-center"><i class="far fa-envelope text-2xl mr-2"></i> shashank.kumar.phe22@itbhu.ac.in</a></li>
+        <li><a href="https://www.linkedin.com/in/your-linkedin-profile" class="flex items-center"><i class="fab fa-linkedin text-2xl mr-2"></i> LinkedIn</a></li>
+      </ul>
+    </div>
+  </footer>
+  
+  <script src="script.js"></script>
+</body>
+</html>
