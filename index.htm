@@ -58,14 +58,15 @@
     }
 
     .project-card {
-      border-radius: 20px;
+      border-radius: 12px;
       overflow: hidden;
       box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
       transition: transform 0.3s ease;
+      background-color: white;
     }
 
     .project-card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-10px);
     }
 
 
@@ -100,7 +101,7 @@
 
 .timeline-content h3 {
   margin-bottom: 0.5rem;
-  color: #2e2f2f;
+  color: #3b3c3d;
   font-size: 1.25rem;
   font-weight: bold;
 }
@@ -110,19 +111,6 @@
   color: #2e2f2f;
   font-size: 0.875rem;
 }
-
-.timeline-item:before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: -8px;
-  width: 16px;
-  height: 16px;
-  background-color: #fff;
-  border-radius: 50%;
-  transform: translateY(-50%);
-}
-
 .timeline-item:first-child:before {
   display: none;
 }
@@ -137,6 +125,11 @@
 
 .timeline-item:last-child:before {
   border-width: 0;
+}
+
+.timeline-item:hover{
+  transform: scale(1.01);
+  transition: 0.2s;
 }
 .joke-card {
   background-color: #ffffff;
@@ -223,37 +216,36 @@
       <div class="timeline">
         <div class="timeline-item">
           <div class="timeline-content">
-            <h3>IIT BHU, Varanasi</h3>
+            <h3><i class="fas fa-university"></i> IIT BHU, Varanasi</h3>
             <p class="text-gray-500">B.tech in Pharmaceutical Engineering and Technology, 2022-2026</p>
           </div>
         </div>
         <div class="timeline-item">
           <div class="timeline-content">
-            <h3>S.A.D.N Convent School</h3>
+            <h3><i class="fas fa-graduation-cap"></i> S.A.D.N Convent School</h3>
             <p class="text-gray-500">Completed Class 12th in 2021, Scored 96.6%</p>
           </div>
         </div>
         <div class="timeline-item">
-            <div class="timeline-content">
-              <h3>G.I.P Public School</h3>
-              <p class="text-gray-500">Completed Class 10th in 2019, Scored 95%</p>
-            </div>
+          <div class="timeline-content">
+            <h3><i class="fas fa-school"></i> G.I.P Public School</h3>
+            <p class="text-gray-500">Completed Class 10th in 2019, Scored 95%</p>
           </div>
+        </div>
       </div>
     </div>
   </section>
-  
   
   <section id="certificates" class="section bg-gradient-to-r from-pink-600 to-rose-600 text-white">
     <div class="container mx-auto section-content">
       <h2 class="section-title">Certificates</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="certificate-card bg-white rounded-lg p-4 flex items-center justify-center flex-col hover:shadow-xl transition duration-300">
+        <div class="certificate-card bg-white rounded-lg p-4 flex items-center justify-center flex-col hover:shadow-xl transition duration-400">
           <i class="fab fa-java text-4xl mb-4 text-gray-500"></i>
           <h3 class="text-xl font-bold mb-2 text-gray-500">Oracle Certified Java 8 Programmer</h3>
           <p class="text-gray-500">Year: 2017</p>
         </div>
-        <div class="certificate-card bg-white rounded-lg p-4 flex items-center justify-center flex-col hover:shadow-xl transition duration-300">
+        <div class="certificate-card bg-white rounded-lg p-4 flex items-center justify-center flex-col hover:shadow-xl transition duration-400">
           <i class="fab fa-google text-4xl mb-4 text-gray-500"></i>
           <h3 class="text-xl font-bold mb-2 text-gray-500" >Google Certified Associate Android Developer</h3>
           <p class="text-gray-500">Year: 2018</p>
@@ -298,6 +290,19 @@
             <i class="fab fa-php text-3xl mb-2"></i>
             <p>PHP</p>
           </li>
+          <li class="p-4 bg-white rounded-lg  text-center text-gray-500 flex-col hover:shadow-xl transition duration-300">
+            <i class="fab fa-aws text-3xl mb-2"></i>
+            <p>AWS</p>
+          </li>
+          <li class="p-4 bg-white rounded-lg  text-center text-gray-500 flex-col hover:shadow-xl transition duration-300">
+            <i class="fas fa-database text-3xl mb-2"></i>
+            <p>SQL</p>
+          </li>
+          <li class="p-4 bg-white rounded-lg  text-center text-gray-500 flex-col hover:shadow-xl transition duration-300">
+            <i class="fas fa-code-branch text-3xl mb-2"></i>
+            <p>Firebase</p>
+          </li>
+          
       </ul>
     </div>
   </section>
@@ -306,27 +311,28 @@
     <div class="container mx-auto section-content">
       <h2 class="section-title">My Projects</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="project-card">
-          <img src="unnamed.png" alt="Project 1" class="w-64">
+        <div class="project-card text-gray-500 bg-gray-100 rounded-lg">
+          <img src="unnamed.png" alt="Project 1" class="w-full">
           <div class="p-4">
             <h3 class="text-xl font-bold mb-2">Opined</h3>
-            <p class="mb-2">Opined is a discussion-driven micro-blogging social media platform that focuses only on people’s opinions and dissent. </p>
-            <p class="text-sm text-white-500 mb-2">App Link: <a href="https://play.google.com/store/apps/details?id=com.app.weopined&hl=en_IN&gl=US" class="text-white underline">Link to Playstore</a></p>
-            <p class="text-sm text-white-500">Installs: 9000+</p>
+            <p class="mb-4">Opined is a discussion-driven micro-blogging social media platform that focuses only on people’s opinions and dissent.</p>
+            <p class="text-sm text-gray-500 mb-2">App Link: <a href="https://play.google.com/store/apps/details?id=com.app.weopined&hl=en_IN&gl=US" class="text-gray-500 underline">Link to Playstore</a></p>
+            <p class="text-sm text-gray-500">Installs: 9000+</p>
           </div>
         </div>
-        <div class="project-card">
-          <img src="orion.png" alt="Project 2" class="w-64 p-8">
+        <div class="project-card text-gray-500 bg-gray-100 rounded-lg">
+          <img src="orion.png" alt="Project 2" class="w-full p-8">
           <div class="p-4">
             <h3 class="text-xl font-bold mb-2">Android Tutorial App</h3>
-            <p class="mb-2">Android Tutorial app with code examples to learn Android, Java, Kotlin at one place. </p>
-            <p class="text-sm text-white-500 mb-2">App Link: <a href="https://play.google.com/store/apps/details?id=programming.android.tutorial&hl=en_IN&gl=US" class="text-white underline">Link to Playstore</a></p>
-            <p class="text-sm text-white-500">Installs: 32,000+</p>
+            <p class="mb-4">Android Tutorial app with code examples to learn Android, Java, Kotlin at one place.</p>
+            <p class="text-sm text-gray-500 mb-2">App Link: <a href="https://play.google.com/store/apps/details?id=programming.android.tutorial&hl=en_IN&gl=US" class="text-gray-500 underline">Link to Playstore</a></p>
+            <p class="text-sm text-gray-500">Installs: 32,000+</p>
           </div>
         </div>
       </div>
     </div>
   </section>
+  
 
   <section id="jokes" class="section bg-gradient-to-r from-yellow-600 to-amber-600 text-gray-500">
     <div class="container mx-auto section-content">
